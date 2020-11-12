@@ -7,11 +7,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="border">    
+    <div class="border border2" id="border">    
     </div>
-    <div class="main-div">
+    <div class="main-div" id="main-div">
         <span>Click me</span>
    </div>
+   
+   <script>
+     
+   
+     (function(document){
+  var div = document.getElementById('border');
+  var icon = document.getElementById('main-div');
+  var open = false;
+  
+  icon.addEventListener('click', function(){
+    if(open){
+      div.className = 'border';  
+    } else{
+      div.className = 'border open';
+    }
+    
+    open = !open;
+  });
+})(document);
 
-</body>
+   </script>
+
 </html>
